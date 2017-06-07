@@ -9,7 +9,7 @@ function Thermostat() {
 
 Thermostat.prototype.up = function(){
   this.temperature += 1;
-  if(powerSavingModeOn && this.temperature > 25){
+  if(this.powerSavingModeOn && this.temperature > 25){
     this.temperature = this.MAXIMUM_TEMPERATURE_SAVING_MODE_ON
   };
 };
