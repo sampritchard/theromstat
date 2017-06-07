@@ -21,4 +21,12 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(19);
   });
 
+  it('Temperature can not go below 10', function(){
+    for(var i = 0; i<11; i++){
+    thermostat.down();
+  };
+    expect(thermostat.temperature).toEqual(10);
+  });
+
+
 });
