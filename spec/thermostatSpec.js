@@ -28,5 +28,9 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(10);
   });
 
+  it('Power saving mode can be switched on and off', function() {
+    expect(thermostat.powerSavingModeOn()).toBe(true);
+    expect(thermostat.powerSavingModeOff()).toBe(false);
+  });
 
 });
