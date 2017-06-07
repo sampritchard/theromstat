@@ -41,5 +41,10 @@ Thermostat.prototype.isMaximumTemperature = function() {
 
 Thermostat.prototype.reset = function() {
   return this.temperature = 20;
-  // return this.temperature;
+}
+
+Thermostat.prototype.currentEnergyUsage = function(){
+  if (this.temperature < 18){
+    return 'Low usage'
+  }
 }
