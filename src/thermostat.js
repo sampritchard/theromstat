@@ -10,8 +10,6 @@ function Thermostat() {
 };
 
 Thermostat.prototype.up = function(){
-  // this.temperature += 1;
-  // console.log(this.temperature);
   this.isMaximumTemperature();
   if(this.temperature >= this.MAX_TEMP){
     return 'TEMP TOO HIGH';
@@ -22,7 +20,8 @@ Thermostat.prototype.up = function(){
 
 Thermostat.prototype.down = function(){
   if (this.temperature <= this.MINIMUM_TEMPERATURE){
-    return this.temperature = 10;
+    this.temperature = 10;
+    return 'TEMP TOO LOW';
   }else{
   return this.temperature -= 1;
   }
@@ -39,3 +38,8 @@ Thermostat.prototype.isMaximumTemperature = function() {
     return this.MAX_TEMP = this.MAXIMUM_TEMPERATURE_SAVING_MODE_ON;
   }
 };
+
+Thermostat.prototype.reset = function() {
+  return this.temperature = 20;
+  // return this.temperature;
+}

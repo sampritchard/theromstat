@@ -29,8 +29,6 @@ describe('Thermostat', function() {
   });
 
   it('Power saving mode can be switched on and off', function() {
-    // expect(thermostat.powerSavingModeOn()).toBe(true);
-    // expect(thermostat.powerSavingModeOff()).toBe(false);
     thermostat.switchPowerSavingMode();
     expect(thermostat.powerSavingMode).toBe(false);
   });
@@ -48,5 +46,15 @@ describe('Thermostat', function() {
       thermostat.up();
     }
     expect(thermostat.temperature).toEqual(32);
+  });
+
+  it('Power saving mode is on by deafult', function(){
+    expect(thermostat.powerSavingMode).toBe(true);
+  });
+
+  it('resets the temperature to 20', function() {
+    thermostat.up();
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20);
   });
 });
