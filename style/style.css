@@ -4,7 +4,13 @@ body {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 50px;
+  font-family: fantasy;
+  text-align: center;
+}
+
+h2 {
+  font-size: 120px;
   font-family: fantasy;
   text-align: center;
 }
@@ -17,7 +23,24 @@ h1 {
   background-color: pink;
 }
 
+#temperature-reset {
+  font-family: serif;
+  font-size: 40px;
+}
+
 p {
   font-size: 20px;
   font-family: sans-serif;
+}
+
+.Low-usage {
+  color: #34A853;
+}
+
+.Medium-usage {
+  color: #3342FF
+}
+
+.High-usage {
+  color: #FF3333
 }

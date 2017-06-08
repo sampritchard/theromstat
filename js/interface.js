@@ -2,21 +2,26 @@ $(document).ready(function() {
 
   thermostat = new Thermostat();
 
-  $('#temperature').text(thermostat.temperature);
+  function seeTemperature() {
+     $('#temperature').text(thermostat.temperature);
+     $('#temperature').attr('class', thermostat.currentEnergyUsage());
+  }
+
+  seeTemperature();
 
   $('#temperature-up').click(function() {
   thermostat.up();
-  $('#temperature').text(thermostat.temperature);
+  seeTemperature();
   })
 
   $('#temperature-down').click(function() {
   thermostat.down();
-  $('#temperature').text(thermostat.temperature);
+  seeTemperature();
   })
 
   $('#temperature-reset').click(function() {
   thermostat.reset();
-  $('#temperature').text(thermostat.temperature);
+  seeTemperature();
   })
 
   $('#switch-power-mode').click(function() {
@@ -26,7 +31,7 @@ $(document).ready(function() {
    } else {
      $('#power-saving-status').text('OFF')
    }
-   $('#temperature').text(thermostat.temperature);
+  //  seeTemperature();  --> need this for when I implement temp reset when power saving switch
  })
 
 })
