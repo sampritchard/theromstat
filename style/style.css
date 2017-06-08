@@ -1,6 +1,8 @@
 body {
-  background-color: lightblue;
+  background-image: url("../images/earth.jpg");
+  /*background-color: lightblue;*/
   text-align: center;
+  background-size: cover;
 }
 
 h1 {
@@ -17,15 +19,19 @@ h2 {
 
 #temperature-up {
   font-size: 30px;
+  border-style: ridge;
 }
 
 #temperature-down {
   background-color: pink;
+  border-style: dotted;
 }
 
 #temperature-reset {
   font-family: serif;
   font-size: 40px;
+  background-color: navy;
+  color: white;
 }
 
 p {

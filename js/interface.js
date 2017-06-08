@@ -46,11 +46,11 @@ function displayWeather(city) {
   })
 }
 
-// displayWeather('London');
-
 $('#select-city').submit(function(event) {
   event.preventDefault();
   var city = $('#current-city').val();
   displayWeather(city);
 })
+
+
 })
