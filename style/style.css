@@ -1,36 +1,67 @@
 body {
-  background-image: url("../images/earth.jpg");
+  background: linear-gradient(to right, #56CCF2, #2F80ED);
   text-align: center;
   background-size: cover;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
   font-family: fantasy;
   text-align: center;
 }
 
 h2 {
-  font-size: 120px;
+  font-size: 90px;
   font-family: fantasy;
   text-align: center;
 }
 
+#current-condition {
+  width: 50px;
+}
+
 #temperature-up {
-  font-size: 30px;
-  border-style: ridge;
+    font-size: 10px;
+    border-radius: 25px;
+    background-color: #FF8A33;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 80px;
+    height: 80px;
 }
 
 #temperature-down {
-  background-color: pink;
-  border-style: dotted;
+    font-size: 10px;
+    border-radius: 25px;
+    background-color: #FF8A33;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 80px;
+    height: 80px;
 }
 
 #temperature-reset {
-  font-family: serif;
-  font-size: 40px;
-  background-color: navy;
-  color: white;
+    font-size: 10px;
+    border-radius: 25px;
+    background-color: #FF8A33;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+#switch-power-mode {
+      font-size: 10px;
+      border-radius: 25px;
+      background-color: #FF8A33;
+      background-position: left top;
+      background-repeat: repeat;
+      padding: 20px;
+      width: 80px;
+      height: 80px;
 }
 
 p {
