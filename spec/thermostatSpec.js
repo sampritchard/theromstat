@@ -62,18 +62,18 @@ describe('Thermostat', function() {
     for(var i = 0; i < 3; i++) {
       thermostat.down();
     }
-    expect(thermostat.currentEnergyUsage()).toContain('Low usage');
+    expect(thermostat.currentEnergyUsage()).toContain('Low-usage');
   });
 
   it('it returns medium usage if the temperature is between 18 and 25', function(){
-    expect(thermostat.currentEnergyUsage()).toContain('Medium usage');
+    expect(thermostat.currentEnergyUsage()).toContain('Medium-usage');
   });
 
   it('it returns highusage if the temperature is above 24', function(){
     for(var i = 0; i < 5; i++) {
       thermostat.up();
     }
-    expect(thermostat.currentEnergyUsage()).toContain('High usage');
+    expect(thermostat.currentEnergyUsage()).toContain('High-usage');
   });
 
 });

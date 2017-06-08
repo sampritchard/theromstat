@@ -31,7 +31,7 @@ $(document).ready(function() {
    } else {
      $('#power-saving-status').text('OFF')
    }
-  //  seeTemperature();  --> need this for when I implement temp reset when power saving switch
+  seeTemperature();
  })
 
 })
