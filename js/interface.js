@@ -43,6 +43,7 @@ function displayWeather(city) {
   var units = '&units=metric';
   $.get(url + token + units, function(data) {
     $('#current-temperature').text(data.main.temp);
+    $('#current-condition').attr('src', 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png');
   })
 }
 
@@ -51,6 +52,5 @@ $('#select-city').submit(function(event) {
   var city = $('#current-city').val();
   displayWeather(city);
 })
-
 
 })
