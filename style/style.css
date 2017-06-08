@@ -16,3 +16,8 @@ h1 {
 #temperature-down {
   background-color: pink;
 }
+
+p {
+  font-size: 20px;
+  font-family: sans-serif;
+}
