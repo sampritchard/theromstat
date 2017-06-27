@@ -2,17 +2,16 @@ body {
   background: linear-gradient(to right, #56CCF2, #2F80ED);
   text-align: center;
   background-size: cover;
+  font-family: monospace;
 }
 
 h1 {
   font-size: 30px;
-  font-family: fantasy;
   text-align: center;
 }
 
 h2 {
   font-size: 90px;
-  font-family: fantasy;
   text-align: center;
 }
 
@@ -66,7 +65,6 @@ h2 {
 
 p {
   font-size: 20px;
-  font-family: sans-serif;
 }
 
 .Low-usage {

@@ -1,5 +1,4 @@
 
-
 $(document).ready(function() {
 
   thermostat = new Thermostat();
@@ -7,6 +6,7 @@ $(document).ready(function() {
   function seeTemperature() {
      $('#temperature').text(thermostat.temperature);
      $('#temperature').attr('class', thermostat.currentEnergyUsage());
+     $.post("http://localhost:4567/temperature", {temperature: thermostat.temperature});
   }
 
   seeTemperature();
@@ -36,6 +36,11 @@ $(document).ready(function() {
   seeTemperature();
  })
 
+$.get("http://localhost:4567/temperature", function(data) {
+  var data = JSON.parse(data)
+  $("#temperature").text(data.temperature);
+  console.log(1)
+})
 
 function displayWeather(city) {
   var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
